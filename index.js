@@ -93,7 +93,6 @@ var greeting = function(greeting, location, time) {
 };
 
 
-
 // 2.
 var contestants = function(arr) {
     return arr.length;
@@ -125,9 +124,8 @@ var dogsWithClasses = dogContestants.map(e => {
 var firstInClass = function(arr) {
     if (!arr.length) return {};
     
-    let temp = firstInClass(arr.slice(1));
-    Object.assign(temp, arr[0]);
-    return temp;
+    return Object.assign(firstInClass(arr.slice(1)), arr[0]);
+
 };
 
 
